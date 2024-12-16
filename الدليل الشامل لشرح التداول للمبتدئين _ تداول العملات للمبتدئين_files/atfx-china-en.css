@@ -1,0 +1,177 @@
+.recur-utility-button-container > .recur-utility-button {
+  margin-right  : 0px;
+  margin-bottom : 7.5px;
+  opacity       : 0.9;
+  z-index       : 1000;
+}
+
+.recur-utility-button {
+	box-shadow       : none !important;
+	background-color : #22272d !important;
+  width            : 60px !important;
+  height           : 60px !important;
+}
+
+.recur-utility-button:hover {
+  transform        : none !important;
+  background-color : #f2672a !important;
+  opacity          : 1 !important;
+}
+
+a.recur-utility-button div.d-flex {
+  margin-right: 20px;
+}
+
+a.recur-utility-button div img {
+  width  : 22px;
+  height : 22px;
+}
+
+.recur-utility-vertical-button-group {
+  flex-direction : column;
+  display    : flex !important;
+  /*animation  : hidebutton 0.3s;*/
+  transition : visibility 0s ease-out 300ms, bottom 300ms ease-out;
+  visibility : hidden;
+  bottom     : 0px !important;
+}
+
+.recur-utility-vertical-button-group a {
+	box-shadow       : none !important;
+	background-color : #22272d !important;
+  display          : flex !important;
+  margin-right     : 0px !important;
+}
+
+.recur-utility-vertical-button-group a:hover {
+  transform        : none        !important;
+  background-color : #f2672a     !important;
+  border-radius    : 0 50% 50% 0 !important;
+  margin-right     : 0px !important;
+  opacity          : 1 !important;
+}
+
+.recur-utility-vertical-button-group.show-button {
+  display        : flex !important;
+  flex-direction : column;
+  /*animation      : showbutton 0.3s;*/
+  width          : 100%;
+  transition     : visibility 0s ease-out 0ms, bottom 300ms ease-out;
+  visibility     : visible;
+  bottom         : 75px !important;
+}
+
+.recur-utility-button[data-channel="QQ"] {
+  order : 1;
+}
+
+.recur-utility-button[data-channel="QQ"] img {
+  width  : 20.75px !important;
+  height : 24.55px !important;
+}
+
+.recur-utility-button[data-channel^="LIVECHAT"] {
+  order : 2;
+}
+
+.recur-utility-button[data-channel="LIVECHAT"] img {
+  width  : 20.45px !important;
+  height : 20.45px !important;
+}
+
+.recur-utility-button[data-channel="PHONE"] {
+  order : 3;
+}
+
+.recur-utility-button[data-channel="PHONE"] {
+  order : 3;
+}
+
+.recur-utility-button[data-channel="PHONE"] div:first-child {
+  margin-right : 18.5px !important;
+}
+
+.recur-utility-button[data-channel="PHONE"] img {
+  width  : 22.38px !important;
+  height : 22.38px !important;
+}
+
+.recur-utility-vertical-button-group a:hover .button-title {
+  opacity      : 1;
+  display      : flex;
+  height       : 60px;
+  align-items  : center;
+  width        : 100px;
+  background   : #f2672a;
+}
+
+.recur-utility-vertical-button-group .recur-utility-button[data-channel="PHONE"]:hover .button-title {
+  width : 220px;
+}
+
+.recur-utility-vertical-button-group a:hover .button-title::before{
+   content               : '';
+   position              : absolute;
+   left                  : -115px;
+   width                 : 60px;
+   height                : 60px;
+   -moz-border-radius    : 50%;
+   -webkit-border-radius : 50%;
+   border-radius         : 50%;
+   background-color      : #f2672a;
+}
+
+.recur-utility-vertical-button-group .recur-utility-button[data-channel="PHONE"]:hover .button-title::before {
+   left : -200px;
+}
+
+.button-title-detail {
+  width        : 120px !important;
+  font-size    : 16px !important;
+  margin-right : 20px;
+}
+
+.recur-utility-button[data-channel="PHONE"] .button-title-detail {
+  width        : 170px !important;
+  margin-right : 10px;
+}
+
+.show-button a {
+  opacity : 0.9 !important;
+}
+
+@keyframes showbutton {
+  0% {
+    transform: translate(0, 100%);
+  }
+
+  25% {
+    transform: translate(0, 50%);
+  }
+
+  50% {
+    transform: translate(0, 25%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes hidebutton {
+  0% {
+    transform : translate(0, 0);
+  }
+
+  25% {
+    transform : translate(0, 50%);
+  }
+
+  50% {
+    transform : translate(0, 75%);
+  }
+
+  100% {
+    transform  : translate(0, 100%);
+  }
+}
